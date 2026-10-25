@@ -34,6 +34,11 @@ if ! jps | grep -q "ResourceManager"; then
     start-yarn.sh
 fi
 
+if ! jps | grep -q "JobHistoryServer"; then
+    echo "Starting MapReduce JobHistoryServer (port 10020)..."
+    mr-jobhistory-daemon.sh start historyserver 2>/dev/null || mapred --daemon start historyserver 2>/dev/null || true
+fi
+
 # Wait for NameNode to exit safemode
 hdfs dfsadmin -safemode wait
 
