@@ -1,0 +1,10 @@
+5	#bigdata
+5	#hadoop
+5	#tech
+3	#ai
+3	#coding
+2	#analytics
+2	#cloud
+2	#data
+2	#ml
+2	#python

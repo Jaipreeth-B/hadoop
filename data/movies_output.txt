@@ -1,0 +1,10 @@
+5.0	Interstellar
+5.0	Oppenheimer
+5.0	The_Dark_Knight
+5.0	The_Matrix
+4.5	Avatar
+4.5	Inception
+4.5	Joker
+4.5	The_Prestige
+4.0	Gladiator
+3.5	Dunkirk
