@@ -19,7 +19,7 @@ sudo service ssh status >/dev/null 2>&1 || sudo service ssh start 2>/dev/null ||
 
 # 3. Ensure Hadoop services are running
 echo "=== Checking Hadoop Services ==="
-if ! jps | grep -q "NameNode"; then
+if ! jps | grep -q "NameNode" || ! jps | grep -q "DataNode"; then
     echo "Starting DFS services..."
     start-dfs.sh
 fi

@@ -219,6 +219,9 @@ echo "=== Step 7: Formatting NameNode ==="
 stop-yarn.sh 2>/dev/null || true
 stop-dfs.sh 2>/dev/null || true
 
+# Clean stale NameNode and DataNode data directories to prevent clusterID mismatch
+rm -rf /usr/local/hadoop/hdfs/namenode/* /usr/local/hadoop/hdfs/datanode/*
+
 # Format NameNode (non-interactive)
 /usr/local/hadoop/bin/hdfs namenode -format -force
 
